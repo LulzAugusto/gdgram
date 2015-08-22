@@ -58,10 +58,10 @@ limitations under the License
             }
         </style>
     </head>
-<body>
+<body ng-app="app">
     <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
         <main class="mdl-layout__content">
-            <div class="demo-blog__posts mdl-grid">
+            <div class="demo-blog__posts mdl-grid" ng-view>
 
             </div>
 
@@ -95,6 +95,15 @@ limitations under the License
     <script src="libs/material.js"></script>
     <script src="libs/angular.js"></script>
     <script src="libs/angular-route.js"></script>
+
+    <script src="app/app.module.js"></script>
+
+    <script src="app/core/core.module.js"></script>
+
+    <script src="app/pictures/pictures.module.js"></script>
+    <script src="app/pictures/pictures.controller.js"></script>
+    <script src="app/pictures/pictures.routes.js"></script>
+    <script src="app/pictures/instagram.js"></script>
 </body>
 <script>
     Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
